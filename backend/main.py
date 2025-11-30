@@ -54,10 +54,10 @@ async def analyze_resume(
             raise HTTPException(status_code=400, detail="Could not extract text from PDF")
             
         # NLP Analysis
-        score = calculate_role_fit_score(resume_text, jd_text)
-        missing_skills = list(analyze_skill_gaps(resume_text, jd_text))
+        score = calculate_role_fit_score(resume_text, jd_text, api_key)
+        missing_skills = list(analyze_skill_gaps(resume_text, jd_text, api_key))
         recruiter_metrics = get_recruiter_metrics(resume_text)
-        sentence_scores = get_sentence_scores(resume_text, jd_text)
+        sentence_scores = get_sentence_scores(resume_text, jd_text, api_key)
         
         # GenAI Analysis (Sub-scores)
         sub_scores = get_sub_scores(resume_text, jd_text, api_key, model_name)
