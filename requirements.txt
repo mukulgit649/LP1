@@ -1,9 +1,11 @@
-streamlit
+fastapi
+uvicorn
+python-multipart
 spacy
 sentence-transformers
 google-generativeai
-python-dotenv
 pdfplumber
+python-dotenv
 plotly
 st-annotated-text
 https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1.tar.gz
